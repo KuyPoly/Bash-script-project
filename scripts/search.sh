@@ -1,4 +1,6 @@
 #!/bin/bash#!/bin/bash
+# Source the log script
+source scripts/log.sh
 
 # Function to search for files
 search_files(){
