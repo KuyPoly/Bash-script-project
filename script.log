@@ -1,2 +1,10 @@
 2025-03-26 00:00:39 - Listed contents of: /home/poly/
 2025-03-26 00:03:06 - Search for 'compress.sh' in 'scripts' - Found 1 file(s).
+2025-03-26 01:20:32 - Failed to count files: Subdirectory 'n k' does not exist in 'scripts'.
+2025-03-26 01:20:58 - Counted 115 files in '/home/poly/bashFileManager'.
+2025-03-26 01:21:32 - Failed to display disk usage: 'log.sh' is not a valid directory.
+2025-03-26 01:21:47 - Displayed disk usage for directory: /home/poly/bashFileManager (Size: 804K, Files: 115, Subdirectories: 84)
+2025-03-26 01:25:17 - Counted 7 files in '/home/poly/bashFileManager/scripts'.
+2025-03-26 01:25:43 - Counted 115 files in '/home/poly/bashFileManager'.
+2025-03-26 01:26:08 - Listed contents of: /home/poly/bashFileManager
+2025-03-26 01:28:00 - Counted 16 files in '/home/poly/Desktop'.
