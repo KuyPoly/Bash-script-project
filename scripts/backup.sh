@@ -1,8 +1,7 @@
 #!/bin/bash
 
 # Source the log script
-source scripts/log.sh
-
+source "$(dirname "$0")/../log.sh"
 read -p "Enter the file or directory to back up: " src
 read -p "Enter the backup destination: " dest
 

@@ -1,13 +1,12 @@
 #!/bin/bash
 # Source the log script
-source "$(dirname "$0")/../log.sh"
+sourc
 
 # Function to compress using tar + xz
 compress_tar_xz() {
     echo "Compressing directory using tar + xz..."
     tar -cJvf "$1.tar.xz" "$2"  # -c creates, -J for xz compression, -v for verbose, -f for file name
     echo "Directory $2 has been compressed to $1.tar.xz"
-    log_action "Compress '$2' to '$1.tar.xz' using tar + xz."
 }
 
 # Function to compress using zip
@@ -15,7 +14,6 @@ compress_zip() {
     echo "Compressing using zip..."
     zip -r "$1.zip" "$2"  # -r for recursive (to include subdirectories)
     echo "File/Directory $2 has been compressed to $1.zip"
-    log_action "Compress '$2' to '$1.zip' using zip."
 }
 
 # Function to compress using 7z
@@ -23,7 +21,6 @@ compress_7z() {
     echo "Compressing using 7z..."
     7z a "$1.7z" "$2"  # 'a' means add files to archive
     echo "File/Directory $2 has been compressed to $1.7z"
-    log_action "Compress '$2' to '$1.7z' using 7z."
 }
 
 # Main menu for user input
@@ -39,7 +36,6 @@ read -p "Enter the path of the file/directory to compress: " file_or_dir
 # Check if the input is valid before proceeding
 if [ ! -e "$file_or_dir" ]; then
     echo "Error: $file_or_dir is not a valid file or directory."
-    log_action "Compression failed: '$file_or_dir' is not a valid file or directory."
     exit 1
 fi
 
@@ -66,7 +62,6 @@ case $choice in
             compress_tar_xz "$target_dir/$archive_name" "$file_or_dir"
         else
             echo "Error: $file_or_dir is not a valid directory."
-	    log_action "Compression failed '$file_or_dir' is not a valid directory for tar + xz."
         fi
         ;;
     2)
@@ -81,6 +76,6 @@ case $choice in
         ;;
     *)
         echo "Invalid choice. Please run the script again."
-	log_action "Invalid compression choice selected."
         ;;
 esac
+

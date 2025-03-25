@@ -1,6 +1,6 @@
 #!/bin/bash#!/bin/bash
 # Source the log script
-source scripts/log.sh
+source "$(dirname "$0")/../log.sh"
 
 # Function to search for files
 search_files(){
@@ -15,11 +15,14 @@ search_files(){
         # Check if any files were found
         if [ -z "$files" ]; then
             echo "No files matching '$pattern' found in '$directory'."
+	    log_action "Search for '$pattern' in '$directory' - No file found."
         else
             echo "$files"
+	    log_action "Search for '$pattern' in '$directory' - Found $(echo "$files" | wc -l) file(s)."
         fi
     else
         echo "Error: '$directory' is not a valid directory."
+	log_action "Search failed: Invalid directory '$directory'."
     fi
 }
 

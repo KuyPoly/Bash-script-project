@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Source the log script
-source scripts/log.sh
+source "$(dirname "$0")/../log.sh"
 
 read -p "Enter the directory or file path: " path
 
