@@ -14,7 +14,7 @@ while(true); do
 		1) bash scripts/list.sh ;;
 		2) bash scripts/backup.sh ;;
 		3) bash scripts/count.sh ;;
-		4) bash scripts/disk_usae.sh ;;
+		4) bash scripts/disk_usage.sh ;;
 		5) bash scripts/search.sh ;;
 		6) bash scripts/compress.sh ;;
 		7) exit 0;;
