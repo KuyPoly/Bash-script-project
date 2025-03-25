@@ -11,14 +11,6 @@ The Bash File Manager is a shell-based program designed to perform various file 
 6. **Compress Files and Directories** – Supports .tar.xz, .zip, and .7z formats.
 7. **Logging** – Logs all actions in script.log.
 
-## **Structure**
- /BashFileManager
-│── script.log           # Stores log files
-│── scripts/             # Contains individual script functions
-│── README.md            # Documentation
-│── log.sh               # Logging script
-│── main.sh              # Main script entry point
-
 ## **Installation**
 - Linux or macOS with bash
 - tar, zip, 7z, and find utilities installed
