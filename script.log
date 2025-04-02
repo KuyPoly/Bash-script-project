@@ -8,3 +8,10 @@
 2025-03-26 01:25:43 - Counted 115 files in '/home/poly/bashFileManager'.
 2025-03-26 01:26:08 - Listed contents of: /home/poly/bashFileManager
 2025-03-26 01:28:00 - Counted 16 files in '/home/poly/Desktop'.
+2025-04-02 22:17:06 - Compress '/home/norakjed-chhorn/etwob.sh' to '/home/norakjed-chhorn/test_compressed.zip' using zip.
+2025-04-02 22:18:18 - Listed contents of: /home/norakjed-chhorn
+2025-04-02 22:19:05 - Backed up file: /home/norakjed-chhorn/mycal.sh to /home/norakjed-chhorn
+2025-04-02 22:20:03 - Backed up file: /home/norakjed-chhorn/mycal.sh to /home/norakjed-chhorn/Documents
+2025-04-02 22:20:23 - Counted 1 files in '/home/norakjed-chhorn/Documents'.
+2025-04-02 22:20:37 - Displayed disk usage for directory: /home/norakjed-chhorn/Documents (Size: 8.0K, Files: 1, Subdirectories: 0)
+2025-04-02 22:20:59 - Search for '*.txt' in '/home/norakjed-chhorn/Documents' - Found 1 file(s).
