@@ -43,8 +43,8 @@ if [ ! -e "$file_or_dir" ]; then
     exit 1
 fi
 
-# Ask for the target directory to save the compressed file
-read -p "Enter the directory to save the compressed file (leave blank for current directory): " target_dir
+# Ask for the target destination to save the compressed file
+read -p "Enter the destination to save the compressed file (leave blank for current directory): " target_dir
 
 # If the target directory is empty, use the current directory
 if [ -z "$target_dir" ]; then
