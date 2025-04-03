@@ -2,26 +2,43 @@
 
 # Source the log script
 source "$(dirname "$0")/../log.sh"
-read -p "Enter the file or directory to back up: " src
-read -p "Enter the backup destination: " dest
 
-if [ ! -e "$src" ]; then
-    echo "Error: Source path does not exist."
-    log_action "Backup failed: $src (Path does not exist)"
-    exit 1
-fi
+while true; do
+    read -p "Enter the file or directory to back up: " src
+    read -p "Enter the backup destination: " dest
 
-mkdir -p "$dest"
+    if [ -z "$dest" ]; then
+        echo "Error: Backup destination cannot be empty!"
+        log_action "Backup failed: No destination provided"
+        continue  # Return to the main menu
+    fi
 
-if [ -d "$src" ]; then
-    cp -r "$src" "$dest"
-    echo "Directory backed up successfully."
-    log_action "Backed up directory: $src to $dest"
-elif [ -f "$src" ]; then
-    cp "$src" "$dest"
-    echo "File backed up successfully."
-    log_action "Backed up file: $src to $dest"
-else
-    echo "Error: Invalid source type."
-    log_action "Backup failed: $src (Invalid source type)"
-fi
+    if [ "$src" == "$dest" ]; then
+        echo "Error: Backup destination cannot be the same as the source!"
+        log_action "Backup failed: Source and destination are the same ($src)"
+        continue  # Return to the main menu
+    fi
+
+    if [ ! -e "$src" ]; then
+        echo "Error: Source path does not exist."
+        log_action "Backup failed: $src (Path does not exist)"
+        exit 1
+    fi
+
+    mkdir -p "$dest"
+
+    if [ -d "$src" ]; then
+        cp -r "$src" "$dest"
+        echo "Directory backed up successfully."
+        log_action "Backed up directory: $src to $dest"
+    elif [ -f "$src" ]; then
+        cp "$src" "$dest"
+        echo "File backed up successfully."
+        log_action "Backed up file: $src to $dest"
+    else
+        echo "Error: Invalid source type."
+        log_action "Backup failed: $src (Invalid source type)"
+    fi
+
+    break  # Exit loop after successful backup
+done
